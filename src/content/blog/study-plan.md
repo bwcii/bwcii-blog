@@ -1,18 +1,11 @@
 ---
-title: 'The Plan'
-description: 'How and what I study'
-pubDate: 'Jan 23 2024'
+title: 'Study Tips'
+description: 'How I study without burning out'
+pubDate: 'Jan 24 2024'
 heroImage: '/blog-placeholder-2.jpg'
 ---
 
 Hello everyone!
-
-<!--
-- What's the purpose of this post
-- Who can get some value from it
-- What I've tried that hasn't worked well
-- What I'm doing now that is working
--->
 
 This post is to lay out some of the things I've learned to do in the 7 years I've been studying I.T. and programming. Like anything else, studying is a skill that requires practice and continual improvement. Hopefully this post will help those of you that are teaching yourself some good ways to study consistantly long term without getting burnt out.
 
@@ -63,5 +56,24 @@ What do I mean by that you ask? Reference the below graph to see what I mean.
 
 As you can see, I study pretty close to my daily goals for for 6 days in a row, then take at least a day off after that. Knowing this, I can give myself permission to take a day off around then because I know this pattern works for me. I get caught right back up to my goal within a day or two after my day off.
 
+You should also take some time to intentionally experiment with how you study. Try changing what time during the day you study, play with how long you study during a single study session. Maybe pomodoro timers work great for you, maybe not. If you track your study time, you'll be able to see what works for you.
+
 **Burnout and Recovery**
 
+All of the above are great on their own, but when you bring them all together you can achieve the more important goal of not burning yourself out. 
+
+Studying consistently is difficult because the more you study the closer to burnout you'll get. You will burnout at some point. It's just going to happen. That's why you need to experiment and track how you study. Eventually you'll find a sweet spot that lets you study without burning out.
+
+Once you do this long enough, you'll actually be able to identify symptoms of pre-burnout. Listen to them! There's no reason to push yourself to your breaking point when you can just take a day off. Being completely burnt out will cost you more study time, give you more stress, and demotivate you much more than if you took a break as soon as you notice you're entering your pre-burnout phase.
+
+I'll give you an example real quick. When I get burnt out, my motivation goes to zero and I feel like an empty shell. I can still get myself to go through the motions of studying, but I have zero retention. I'm also extremely irritable, and basically glue myself to the sofa and watch brain numbing TV for up to two weeks. My burnout is very strong and lasts quite a long time.
+
+What I've noticed is that as I get closer to burnout, the hours I'll study each day naturally get lower and lower, I'll start missing days of studying, and then in a last act of defiance I'll dump a ton of hours into a couple of days. Then BAM. Burnout is right around the corner. 
+
+As soon as I notice I'm getting close to burnout, I take at least a day off. No studying, no extra work, no side projects. The best way to fend off burnout is to spend time with friends and family. Reminding yourself why you're studying and how these new skills can impact those around you can help recharge your motivation batteries and fend off burnout.
+
+Better yet! Schedule breaks into your studying if you find that you keep bumping into burnout. It's like working for the weekend. If you know your break is right around the corner it can make it easier on you to stay consistant until your study vacation!
+
+**Conclusion**
+
+I know a lot of this may seem obvious, but it's difficult. 
