@@ -1,5 +1,5 @@
 ---
-title: 'Study Tips'
+title: 'Healthy Study Essentials'
 description: 'How I study without burning out'
 pubDate: 'Jan 24 2024'
 heroImage: '/blog-placeholder-2.jpg'
@@ -76,4 +76,10 @@ Better yet! Schedule breaks into your studying if you find that you keep bumping
 
 **Conclusion**
 
-I know a lot of this may seem obvious, but it's difficult. 
+I know a lot of this may seem obvious, but if you've never done long term studying like this before then it can be easy to study too hard, too fast, and end up burnt out. 
+
+Tracking your time is key to finding a study pattern that works for you. It'll help to drive you towards healthy and reasonable study goals that will help you avoid burnout.
+
+Don't try to do everything perfectly. Just do the minimum needed to get started and focus on continual improvement towards healthy study habits. Perfection is the enemy of progress!
+
+Now get out there and get learning!
