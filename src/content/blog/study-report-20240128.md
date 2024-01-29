@@ -1,5 +1,5 @@
 ---
-title: 'Study Report - 01/28/2028'
+title: 'Study Report - 01/28/2024'
 description: 'Light on studying, heavy on fun'
 pubDate: 'Jan 28 2024'
 heroImage: '/blog-placeholder-4.jpg'
