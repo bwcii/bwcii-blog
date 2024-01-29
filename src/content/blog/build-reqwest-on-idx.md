@@ -5,6 +5,8 @@ pubDate: 'Jan 25 2024'
 heroImage: '/blog-placeholder-3.jpg'
 ---
 
+## Introduction
+
 I've been working on a [project](https://myip.bwcii.com) that shows users their current public IP address and will eventually add some additional useful tools people can use. Yesterday I got stuck trying to make an external API call to https://ipgeolocation.io/ and after doing some research I decided to add the reqwest crate to my project. In Google's IDX platform, this wasn't as easy as I was expecting. 
 
 Lets talk about the problem and how I fixed it.
