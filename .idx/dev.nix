@@ -1,7 +1,10 @@
 { pkgs, ... }: {
   channel = "stable-23.11";
   packages = [ pkgs.nodejs ];
-  idx.extensions = [ "astro-build.astro-vscode" ];
+  idx.extensions = [ 
+    "astro-build.astro-vscode"
+    "unifiedjs.vscode-mdx"
+     ];
   idx.workspace.onCreate.install = ''
     npm install
     yes | npx astro add tailwind'';
