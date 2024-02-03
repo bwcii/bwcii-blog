@@ -6,9 +6,9 @@ heroImage: '/blog-placeholder-4.jpg'
 ---
 
 ## Summary
-**Time Spent Studying** : TBD\
-**Total Time Spent Studying this Year**  TBD \
-**Time Remaining this Year** : TBD
+**Time Spent Studying** : 1:48:45\
+**Total Time Spent Studying this Year**  83:16:29 \
+**Time Remaining this Year** : 916:43:31
 
 **Todays Completed Tasks** : \
 ✅ Made Today's blog post (Not much, but it's something!) \
