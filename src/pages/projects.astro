@@ -1,0 +1,156 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header title={SITE_TITLE} />
+		<main>
+			<h1>Check Out My Projects</h1>
+			<p>
+				*I build in public. Some projects may have limited functionality.
+			</p>
+			<h3>
+				fire-notes
+			</h3>
+			<ul>
+				<li>
+					<strong>Start Date:</strong> 2024-02-01
+				</li>
+				<li>
+					<strong>Status:</strong> ⚠️ Work in Progress ⚠️
+				</li>
+				<li>
+					<strong>Site URL:</strong> TBD (probably going to be firenotes.bwcii.com)
+				</li>
+				<li>
+					<strong>GitHub URL:</strong> <a href="" target="_blank">https://github.com/bwcii/fire-notes</a>
+				</li>
+				<li>
+					<strong>Summary:</strong> This project is going to be a PWA that allows users to create and manage notes. The purpose of this project
+					is to give me something with a practical application so I can learn more about Angular and Firebase. I'm particularly interested in 
+					Firebase Authentication, Firebase Hosting, Cloud Firestore, and Cloud Functions. I've also never made a PWA that can manage state while the 
+					device is offline, so that'll be fun too!
+				</li>
+				<li>
+					<strong>Technologies:</strong> Typescript, Angular Framework, Material UI, Firebase Hosting, Firebase Authentication, Cloud Firestore, Cloud Functions, Google Cloud Build
+				</li>
+			</ul>
+			<br>
+			<h3>
+				bwcii-blog
+			</h3>
+			<ul>
+				<li>
+					<strong>Start Date:</strong> 2024-01-22
+				</li>
+				<li>
+					<strong>Status:</strong> 🎉 Functional & Maintained 🎉
+				</li>
+				<li>
+					<strong>Site URL:</strong> <a href="https://bwcii.com" target="_blank">https://bwcii.com</a>
+				</li>
+				<li>
+					<strong>GitHub URL:</strong> <a href="" target="_blank">https://github.com/bwcii/bwcii-blog</a>
+				</li>
+				<li>
+					<strong>Summary:</strong> This project holds the blog that you're reading right now! The purpose of this project is to  
+					share my experience as an I.T. Security Operations Engineer learning about software engineering, and to understand the 
+					implementation of Google Ads and Analytics.
+				</li>
+				<li>
+					<strong>Technologies:</strong> HTML, CSS, JavaScript, Astro, Markdown, Google Cloud Build, Google Cloud Run, Buildpacks
+				</li>
+			</ul>
+			<br>
+			<h3>
+				playground-api
+			</h3>
+			<ul>
+				<li>
+					<strong>Start Date:</strong> 2024-01-11
+				</li>
+				<li>
+					<strong>Status:</strong> 🎉 Functional & Maintained 🎉
+				</li>
+				<li>
+					<strong>Site URL:</strong> <a href="https://playground-api.bwcii.com" target="_blank">https://playground-api.bwcii.com</a>
+				</li>
+				<li>
+					<strong>GitHub URL:</strong> <a href="" target="_blank">https://github.com/bwcii/playground-api</a>
+				</li>
+				<li>
+					<strong>Summary:</strong> An extremely simple proxy API deployed to Google Cloud using source code based deployment.
+					The purpose of this project is to learn about how to securely deploy API keys to client facing applications.
+					It currently only proxies requests to <a href="https://thecatapi.com/" target="_blank">https://thecatapi.com/</a>, but 
+					eventually this will act as the primary API proxy for my Angular Playground Project. Additional functionality is currently 
+					waiting for additional features to be added to the Angular Playground Project.
+				</li>
+				<li>
+					<strong>Technologies:</strong> JavaScript, Node.js, Express, Google Cloud Build, Google Cloud Run, Buildpacks
+				</li>
+			</ul>
+			<br>
+			<h3>
+				playground
+			</h3>
+			<ul>
+				<li>
+					<strong>Start Date:</strong> 2024-01-03
+				</li>
+				<li>
+					<strong>Status:</strong> 🎉 Functional & Maintained 🎉
+				</li>
+				<li>
+					<strong>Site URL:</strong> <a href="https://angularplayground.bwcii.com" target="_blank">https://angularplayground.bwcii.com</a>
+				</li>
+				<li>
+					<strong>GitHub URL:</strong> <a href="" target="_blank">https://github.com/bwcii/playground</a>
+				</li>
+				<li>
+					<strong>Summary:</strong> An Angular web app contains several components such as reversing text, getting random cat photos via an 
+					API call to the playground-api, and showing ip information via api calls to the ip-reflector-service. The purpose of this project 
+					is to learn the different features and design patterns for Angular applications.
+				</li>
+				<li>
+					<strong>Technologies:</strong> Typescript, Angular Framework, Firebase Hosting (prod env), Material UI, Google Cloud Build (dev env), Google Cloud App Engine (dev env)
+				</li>
+			</ul>
+			<br>
+			<h3>
+				ip-reflector-service
+			</h3>
+			<ul>
+				<li>
+					<strong>Start Date:</strong> 2023-08-30
+				</li>
+				<li>
+					<strong>Status:</strong> 🎉 Functional & Maintained 🎉
+				</li>
+				<li>
+					<strong>Site URL:</strong> <a href="https://myip.bwcii.com" target="_blank">https://myip.bwcii.com</a>
+				</li>
+				<li>
+					<strong>GitHub URL:</strong> <a href="" target="_blank">https://github.com/bwcii/ip-reflector-service</a>
+				</li>
+				<li>
+					<strong>Summary:</strong> Originally created to mimic the functionality of <a href="https://ipchicken.com" target="_blank">ipchicken.com</a>
+				this project has expanded to act as an API proxy for <a href="https://ipgeolocation.io" target="_blank">ipgeolocation.io</a> and 
+				will eventually provide APIs and a web interface to use other network related services. The purpose of this project is to practice
+				backend programming and learn advanced features of asynchronous programming with Rust 
+				</li>
+				<li>
+					<strong>Technologies:</strong> Rust, Axum, Reqwest, Google Cloud Build, Google Cloud Run, Docker
+				</li>
+			</ul>
+		</main>
+		<Footer />
+	</body>
+</html>
