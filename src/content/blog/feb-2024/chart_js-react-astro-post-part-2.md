@@ -9,127 +9,83 @@ heroImage: '/blog-placeholder-3.jpg'
 
 So in the [previous part](../chart_js-react-astro-post) I talked about adding the ability to render React components in Astro. In this post I'll talk about what I pulled together to get my component working and then finally talk about what the actual code does to render the component.
 
-## What I've Done So Far
+## Dependencies
 
+So to add my Chart.js component I had to add a few node packages.
 
-## Chart.js
+- chart.js : Provides the essential functionality that allows the chart to be created
+- react-chartjs-2 : Provides React components for the chart.js package.
 
-## How to add React to Astro
-
-Adding react to Astro was ✨AMAZINGLY✨ easy. Props to the team at Astro. I've had a harder time importing PowerShell Modules than I did adding React to Astro.
-
-So how did I do it? My blog is relatively new and built from the start with Astro, so I got to take the easy route. 
-
-*Check out this article on [how to add React to Astro](https://docs.astro.build/en/guides/integrations-guide/react/)*
-
-I used the easiest option...
-
-````
-npx astro add react
-````
 <br>
 
-This runs a small wizard that adds the necessary npm packages and updates some config files in Astro. Let's talk about what changed after I ran the command. 
+```shell
+npm install chart.js react-chartjs-2
+```
+*installed using the above command*
 
-## What Files Get Changed?
+And with that installed, we're ready to get coding!
 
-<strong>astro.config.mjs</strong>
+## An Example progress.astro app
 
-![File Diff for astro.config.mjs](https://storage.googleapis.com/bwcii-dev-blog-bucket/astro.config.mjs.png)
+So while building the react component, I made a single simple page called progress.astro that ended up looking like tihs...
 
-Not too much changed here!
+```astro
+---
+// Component Imports
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import {MyLine} from '../components/react/MyLine.jsx'
+---
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header title={SITE_TITLE} />
+		<main>
+			<h1>2024 Study Progress</h1>
+      	<MyLine 
+      	client:only="react"
+      	/>
+		</main>
+		<Footer />
+	</body>
+</html>
 
-We've got a new import of react from @astrojs/react. That's relatively straight forward. It just gives us access to the [@astrojs/react](https://www.npmjs.com/package/@astrojs/react) package. 
+```
+*Just figured out how to add this nice langage specific code highlighting!*
 
-This package has the description of "This Astro integration enables server-side rendering and client-side hydration for your React components." This description is important, because as I found out a basic understanding of hydration is important. Since Astro strives to serve as much Server Side Rendered content as possible, additional considerations need to be taken when trying to present React components, which are rendered on the client. We'll talk more about that later.
+So let's talk about some important things here.
 
-The second thing that's changed in this file is the addition of react() to the integrations section. This addition tells Astro that we want to enable the React integration and if needed gives us a way to add Custom Options to the integration. That's not relevant for my current implementation, but it's a good thing to know. 
+**Import React Component**
 
-You can find some related documentation on this [here](https://docs.astro.build/en/guides/integrations-guide/).
+```astro
+---
+import {MyLine} from '../components/react/MyLine.jsx'
+---
+```
+*Line of Interest*
 
-<strong>package-lock.json</strong>
+This is pretty straight forward. We're importing the react component that I've created. When I first made this I went straight to Typescript and was trying to make it work in a .tsx file, but after messing with it and noticing that the rest of the site was made with regular JavaScript I decided to use a .jsx file instead.
 
-This file changes of course, but we don't care about the details here. If you're worried about your package-lock.json file, you've already made a mistake.
+**Using the React Component**
 
-<strong>package.json</strong>
+```astro
+<MyLine 
+client:only="react"
+/>
+```
+*Lines of Interest*
 
-![File Diff for package.json](https://storage.googleapis.com/bwcii-dev-blog-bucket/package.json.png)
+This section is also pretty straight forward. This is where we actually use the react component that we've imported. Do notice however that the *client:only="react"* directive is important, and I spent a couple hours trying to figure out why the heck my component wasn't rendering on my page even though I didn't have any errors. Check out the documentation [here.](https://docs.astro.build/en/reference/directives-reference/)
 
-We've got a few packages added here. I'll list them and give a brief description, but long story short they're packages we need to use react.
+The client directives control how UI Framework Components (aka frontend js stuff) are are hydrated on the page. If you leave this out then guess what, your react component won't render on the page! 
 
-[*@astrojs/react*](https://www.npmjs.com/package/@astrojs/react)
+In the examples in this blog post I used *client:only="react"*, but after reviewing the docs I changed it to *client:visible*. Hopefully that'll improve the performance hit that I took according to the lighthouse developer tool.
 
-We've already mentioned this package in the astro.config.mjs section. Moving on!
+## Now Let's Talk About The React Component Code
 
-[*@types/react*](https://www.npmjs.com/package/@types/react)
 
-This package contains type declarations for using react with typescript. For my implementation I don't think I actually needed this since I didn't use any typescript, but it was automatically added and I'm sure the Astro team knows better than I do.
-
-[*@types/react-dom*](https://www.npmjs.com/package/@types/react-dom)
-
-This package contains type declarations for using react-dom with typescript. According to [this documentation](https://react.dev/reference/react) this package contains a set of features that are only supported for web applications. It's pretty much middleware between React and the browser's DOM. So I guess no iphone apps for me!
-
-[*react*](https://www.npmjs.com/package/react)
-
-This package contains the actual React library. To quote the description from the website ...
-
-*"The react package contains only the functionality necessary to define React components. It is typically used together with a React renderer like react-dom for the web, or react-native for the native environments."*
-
-So it looks like the react package is specifically created to design the UI, and react-dom / react-native is the middle ware that connects the react ui with the rendering engine of the device. Very cool! I didn't know that.
-
-[*react-dom*]()
-
-This package contains the actual react-dom library. I'll quote the website again here...
-
-*This package serves as the entry point to the DOM and server renderers for React. It is intended to be paired with the generic React package, which is shipped as react to npm.*
-
-Pretty straight forward now, but honestly when I started this post I wasn't aware of the relationships between these packages.
-
-<strong>tsconfig.json</strong>
-
-![File Diff for tsconfig.json](https://storage.googleapis.com/bwcii-dev-blog-bucket/ts.config.png)
-
-So let's talk about the three options that are highlighted here. I know strictNullChecks didn't change, but I don't know what it is so I'm gonna google it anyway.
-
-[*strictNullChecks*](https://www.typescriptlang.org/tsconfig#strictNullChecks)
-
-strictNullChecks is a ts.config option that does the following...
-
-*"When strictNullChecks is false, null and undefined are effectively ignored by the language. This can lead to unexpected errors at runtime.*
-
-*When strictNullChecks is true, null and undefined have their own distinct types and you’ll get a type error if you try to use them where a concrete value is expected."*
-
-This is basically the on/off switch to have Typescript throw errors if you try and use a null or undefined value when Typescript expects a real data type. AKA, do your types match?!?
-
-[*jsx*](https://www.typescriptlang.org/tsconfig#jsx)
-
-OK, this one is a weird one for me. I've never looked into the actual post-compilation files that are made when using typescript. However, this sort of makes sense now.
-
-Short version, the jsx option tells typescript how to compile the js files. As I have it in the screen shot, .js files will be created with the JSX changed to _jsx calls.
-
-For example...
-
-````
-// original jsx file content
-export const HelloWorld = () => <h1>Hello world</h1>;
-
-// compiled .js file content
-import { jsx as _jsx } from "react/jsx-runtime";
-import React from 'react';
-export const HelloWorld = () => _jsx("h1", { children: "Hello world" });
-````
-<br>
-
-[*jsxImportSource*](https://www.typescriptlang.org/tsconfig#jsxImportSource)
-
-OK, this one probably goes over my head. It looks like this setting controls how the compiled .js import the packages required for the JS to work. So you can take the same react code, and depending on how this setting is configured it'll be compiled to work with react or with preact.
-
-## To Be Continued
-
-Man, we only ran one command and I've already got to break this out into another part. It's nearly my bed time.
-
-I can say that it's pretty incredible what runs under the hood on just a single command. Lots of moving pieces!
-
-It's also very interesting to learn about some of these things. Every single change to the files taught me something, and I love that.
-
-Catch you in part two all!
