@@ -1,34 +1,18 @@
 ---
-title: '🦆 Chart.js, React, Astro, Oh My! 🦆'
-description: 'I built a thing, time to talk about how it works'
-pubDate: 'Feb 05 2024'
+title: '🦆 Chart.js, React, Astro, Oh My! - Part 2 🦆'
+description: 'I built a thing, time to talk about how it works (again)'
+pubDate: 'Feb 06 2024'
 heroImage: '/blog-placeholder-3.jpg'
 ---
 
 ## Summary
 
-Hello Everyone!
-
-I just want to preface this post by saying that I'm effectively rubber ducking to myself and the great void. I don't know that you'll get any good information out of this post, but if you do then wonderfaul! I'd love to hear about it on [𝕏](https://x.com/bwcii_dev)!
+So in the [previous part](../chart_js-react-astro-post) I talked about adding the ability to render React components in Astro. In this post I'll talk about what I pulled together to get my component working and then finally talk about what the actual code does to render the component.
 
 ## What I've Done So Far
 
-So today I finally got a simple react component created that uses react-chartjs-2 to build a line chart showing my cumulative study time for the year.
-
-![A photo of my cumulative study time line chart](https://storage.googleapis.com/bwcii-dev-blog-bucket/cumulative-study-line-chart.png)
-*Screen shot of my cumulative study time line chart*
-
-I wanted to use this as an excuse to play with React, because more complexity is better of course, and I figured it wouldn't take too awful long. All in it was about 4.5 hours. Not as quick as I was hoping, but honestly not bad at all.
 
 ## Chart.js
-
-So not knowing anything about react, I immediately did the correct thing and focused on finding a good chart library to work with. Usually, I'd work my way from the framework to the library. However, I didn't want to add react to my blog just to end up making a config that wasn't going to work with a popular chart library.
-
-I found [Chart.js](https://www.chartjs.org/) and took a look at the demos and examples. I really liked what I saw, and since this was going to be a simple chart with data manually added to a JS array I wasn't worried about performance and scalability.
-
-*Step One, Done*
-
-After deciding to use Chart.js as my chart library, I then decided to change focus to answering the question "How do I add React to Astro?"
 
 ## How to add React to Astro
 
