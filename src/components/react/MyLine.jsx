@@ -107,7 +107,7 @@ export const MyLine = (data) => {
               85.37,
               86.11,
             ],
-            label: 'Actual Cumulative Study Time',
+            label: 'Actual Study Time',
             borderColor: '#3e95cd',
             fill: false,
           },
@@ -149,7 +149,7 @@ export const MyLine = (data) => {
               92.90,
               95.63,
             ],
-            label: 'Cumulative Study Time Goal',
+            label: 'Study Time Goal',
             borderColor: '#8e5ea2',
             fill: false,
           },
@@ -158,6 +158,8 @@ export const MyLine = (data) => {
       options={{ 
         responsive: false,
        }}
+      width={500}
+      height={250}
     />
   );
 };
