@@ -148,4 +148,4 @@ I can say that it's pretty incredible what runs under the hood on just a single 
 
 It's also very interesting to learn about some of these things. Every single change to the files taught me something, and I love that.
 
-Catch you in part two all!
+Catch you in [part two](/blog/feb-2024/chart_js-react-astro-post-part-2) all!
