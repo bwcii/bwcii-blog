@@ -200,11 +200,16 @@ Instead of using importing Chart.js using **import Chart from 'chart.js/auto';**
 I'll list the individual imports and links to their documentation below.
 
 - [Chart](https://www.chartjs.org/docs/latest/api/classes/Chart.html) : The main Chart class.
+
 - [LineElement](https://www.chartjs.org/docs/latest/api/interfaces/LineElement.html) : The interface for the LineElement visual element. AKA, the actual line we're going to draw.
+
 - [PointElement](https://www.chartjs.org/docs/latest/api/classes/PointElement.html) : The class for individual point objects.
+
 - [LinearScale](https://www.chartjs.org/docs/latest/api/#linearscale) : A type of ChartComponent that sets the type of scale for the chart. AKA, not logarithmic.
 - [Title](https://www.chartjs.org/docs/latest/api/#title) : A type of plugin that handles rendering the title of the chart.
+
 - [CategoryScale](https://www.chartjs.org/docs/latest/api/#categoryscale) : A type ChartComponent that appears to modify the categories (labels set on the x axis in my case) for the line chart.
+
 - [Tooltip](https://www.chartjs.org/docs/latest/api/interfaces/Tooltip.html) : The interface for the Tooltip visual element. AKA, what the user sees when they hover their mouse over the data point.
 
 <br>
@@ -215,3 +220,16 @@ Going back over these I bet there are some that I could omit, and it's also kind
 import { useEffect, useState } from 'react';
 ```
 
+<br>
+
+- [useEffect](https://react.dev/reference/react/useEffect) : from React is used to synchronize your component with some system outside of React by running some code after the component is rendered.
+
+- [useState](https://react.dev/reference/react/useState) : from React is a hook that lets you add a state variable at the top level of your component. 
+
+<br>
+
+So with these imports we've got access to the react-chartjs-2 components, access to the individual api components we need from Chart.js, and access to the useEffect and useState hooks from React. Time to actually build the component.
+
+# To Be Continued
+
+This post will be continued in part three!
