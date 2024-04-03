@@ -122,6 +122,8 @@ export const MyLine = (data) => {
           '3-29-2024',
           '3-30-2024',
           '3-31-2024',
+          '4-1-2024',
+          '4-2-2024',
         ],
         datasets: [
           {
@@ -217,6 +219,8 @@ export const MyLine = (data) => {
               92.22,
               92.22,
               92.22,
+              92.22, //4-1-24
+              92.99, //4-2-24
             ],
             label: 'Actual Study Time',
             borderColor: '#3e95cd',

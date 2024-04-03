@@ -7,6 +7,6 @@ heroImage: '/blog-placeholder-2.jpg'
 
 Hi All!
 
-Still here! Definitely had more recovery than I expected from my surgery, but I think April is the month I'll get back into studying. 
+Still here! Definitely had more recovery than I expected from my surgery, but I think April is the month I'll get back into studying. I haven't done much today, but I have made progress! Baby steps!
 
 I'll keep you all in the loop as I learn and build. Thanks for sticking with me if you're still here.
