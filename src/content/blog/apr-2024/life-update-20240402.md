@@ -1,7 +1,7 @@
 ---
-title: 'Life Update Mar 01 2024'
+title: 'Life Update April 01 2024'
 description: 'Life Update April 02 2024'
-pubDate: 'Apr 02 2024'
+pubDate: 'April 02 2024'
 heroImage: '/blog-placeholder-2.jpg'
 ---
 
