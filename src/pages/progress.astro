@@ -4,7 +4,7 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
-import {MyLine} from '../components/react/MyLine.jsx'
+import { MyLine } from '../components/react/MyLine'
 ---
 <!doctype html>
 <html lang="en">
@@ -15,9 +15,7 @@ import {MyLine} from '../components/react/MyLine.jsx'
 		<Header title={SITE_TITLE} />
 		<main>
 			<h1>2024 Study Progress</h1>
-      	<MyLine 
-      	client:visible
-      	/>
+      	<MyLine client:only />
 		</main>
 		<Footer />
 	</body>
