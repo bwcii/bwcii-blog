@@ -220,7 +220,7 @@ export const MyLine = (data) => {
               92.22,
               92.22,
               92.22, //4-1-24
-              92.99, //4-2-24
+              93.51, //4-2-24
             ],
             label: 'Actual Study Time',
             borderColor: '#3e95cd',
